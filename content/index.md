@@ -1,9 +1,11 @@
-# Nuxt Content
-
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
-
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
-
+---
+title: "Hi I'm Blah"
 ---
 
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+<section class="p-2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio mauris. Sed ac sodales purus. Nullam rutrum sapien sit amet lectus tempor, eget dictum turpis ultricies. Ut placerat dolor in justo vehicula, vel vehicula mauris efficitur.
+</section>
+
+<section class="p-2">
+    Curabitur eget justo vel risus convallis aliquet. Phasellus vel ex id nisi blandit eleifend a eget purus. Fusce consectetur sollicitudin mi, ut ullamcorper urna. Vestibulum consequat ultricies leo, eu eleifend eros interdum at. Proin vulputate, ligula sit amet vestibulum cursus, leo justo suscipit justo, id convallis sapien velit vel metus. Donec posuere odio eu augue feugiat, sit amet rhoncus magna fermentum. Nulla facilisi. Suspendisse malesuada lectus id mi pharetra aliquam. Morbi euismod vel justo non suscipit.
+</section>
