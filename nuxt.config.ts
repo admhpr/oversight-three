@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in', duration: 300 },
+    pageTransition: { name: 'rotate' },
   },
   content: {
     highlight: {

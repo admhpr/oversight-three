@@ -12,7 +12,9 @@ const pages = ref([
     >
       <li class="flex">
         <div class="flex items-center">
-          <a href="/" class="text-gray-400 hover:text-gray-500"> ☄ </a>
+          <NuxtLink to="/" class="text-gray-400 hover:text-gray-500">
+            ☄
+          </NuxtLink>
         </div>
       </li>
       <li v-for="page in pages" :key="page.name" class="flex">
@@ -26,11 +28,11 @@ const pages = ref([
           >
             <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
           </svg>
-          <a
-            :href="page.href"
+          <NuxtLink
+            :to="page.href"
             class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
-            >{{ page.name }}</a
-          >
+            >{{ page.name }}
+          </NuxtLink>
         </div>
       </li>
     </ol>
