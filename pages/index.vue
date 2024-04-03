@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Container from '@/components/Container.vue';
 const portraitImage = '/path/to/your/image.jpg';
 </script>
 <template>
@@ -37,3 +36,14 @@ const portraitImage = '/path/to/your/image.jpg';
     </div>
   </Container>
 </template>
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 40s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

@@ -1,12 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in', duration: 300 },
+  },
   content: {
     highlight: {
       theme: {
-        default: 'github-dark'
+        default: 'github-dark',
       },
-    }
+    },
   },
   colorMode: {
     classSuffix: '',
@@ -14,7 +17,7 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
   typescript: {
-    typeCheck: true
+    typeCheck: true,
   },
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss']
-})
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
+});

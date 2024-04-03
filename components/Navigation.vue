@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const pages = ref([{ name: 'Blog', href: '/blog' }]);
+const pages = ref([
+  { name: 'explore', href: '/explore' },
+  { name: 'explore', href: '/test' },
+]);
 </script>
 <template>
   <nav class="flex border-b border-gray-200 bg-white" aria-label="Breadcrumb">
@@ -9,7 +12,7 @@ const pages = ref([{ name: 'Blog', href: '/blog' }]);
     >
       <li class="flex">
         <div class="flex items-center">
-          <a href="/" class="text-gray-400 hover:text-gray-500"> // LOGO </a>
+          <a href="/" class="text-gray-400 hover:text-gray-500"> ☄ </a>
         </div>
       </li>
       <li v-for="page in pages" :key="page.name" class="flex">

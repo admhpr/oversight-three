@@ -4,6 +4,12 @@ import Navigation from './components/Navigation.vue';
 <template>
   <div>
     <Navigation />
+
     <NuxtPage />
   </div>
 </template>
+<style>
+div {
+  border: red 1px solid;
+}
+</style>
