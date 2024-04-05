@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
+import { useAnime } from '@/composables/useAnime';
 import clsx from 'clsx';
 
 const containerRef = ref(null);
@@ -7,6 +8,10 @@ const containerRef = ref(null);
 const containerClasses = computed(() =>
   clsx(' relative px-4 sm:px-8 lg:px-12')
 );
+
+onMounted(() => {
+  useAnime({ targets: containerRef.value, opacity: [0, 1], duration: 3000 });
+});
 </script>
 
 <template>
