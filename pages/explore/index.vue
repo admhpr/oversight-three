@@ -1,5 +1,21 @@
 <script setup lang="ts">
+import { useAnime } from '@/composables/useAnime';
+
+const animatedContainer = ref(null);
+
+const articleAnimationConfig = {
+  targets: '.article',
+  translateY: -20,
+  opacity: [0, 1],
+  easing: 'linear',
+  delay: useAnime.stagger(300),
+};
+
+onMounted(() => {
+  useAnime(articleAnimationConfig);
+});
 import { ref } from 'vue';
+
 const posts = ref([
   {
     id: 1,
@@ -40,14 +56,19 @@ const posts = ref([
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Some Tezt
       </h2>
+
       <p class="mt-2 text-lg leading-8 text-gray-600">
-        Learn how to grow your business with our expert advice.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+      <div
+        ref="animatedContainer"
+        class="mt-16 space-y-20 lg:mt-20 lg:space-y-20"
+      >
         <article
           v-for="post in posts"
           :key="post.id"
-          class="relative isolate flex flex-col gap-8 lg:flex-row"
+          class="article relative isolate flex flex-col gap-8 lg:flex-row"
         >
           <div
             class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
